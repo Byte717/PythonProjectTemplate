@@ -6,6 +6,37 @@ import argparse
 from typing import *
 
 class TemplateClass:
+    '''
+    __init__(self, *args, **kwargs): Constructor method called when an instance is created.
+    __str__(self): Defines the string representation of an object for print and str.
+    __repr__(self): Defines the official string representation of an object, typically used for debugging.
+    __del__(self): Destructor method called when an object is about to be destroyed.
+    __len__(self): Called by the len() function to determine the length of an object.
+    __getitem__(self, key): Defines behavior for accessing an item, e.g., obj[key].
+    __setitem__(self, key, value): Defines behavior for setting an item, e.g., obj[key] = value.
+    __delitem__(self, key): Defines behavior for deleting an item, e.g., del obj[key].
+    __iter__(self): Returns an iterator object, used in for loops.
+    __next__(self): Returns the next item from an iterator.
+    __contains__(self, item): Called by the in operator to check membership.
+    __call__(self, *args, **kwargs): Makes an instance callable like a function.
+    __enter__(self): Called when entering a context (with statement).
+    __exit__(self, exc_type, exc_val, exc_tb): Called when exiting a context (with statement).
+    __add__(self, other): Defines behavior for the + operator.
+    __sub__(self, other): Defines behavior for the - operator.
+    __mul__(self, other): Defines behavior for the * operator.
+    __truediv__(self, other): Defines behavior for the / operator.
+    __floordiv__(self, other): Defines behavior for the // operator.
+    __mod__(self, other): Defines behavior for the % operator.
+    __pow__(self, other, modulo=None): Defines behavior for the ** operator.
+    __eq__(self, other): Defines behavior for the == operator.
+    __ne__(self, other): Defines behavior for the != operator.
+    __lt__(self, other): Defines behavior for the < operator.
+    __le__(self, other): Defines behavior for the <= operator.
+    __gt__(self, other): Defines behavior for the > operator.
+    __ge__(self, other): Defines behavior for the >= operator.
+    __hash__(self): Defines the hash value for the object, used in hash tables and by the hash() function.
+    __bool__(self): Defines the boolean value of the object, used by the bool() function and in conditional expressions.
+    '''
     def __init__(self, *args, **kwargs):
         # Constructor
         pass
