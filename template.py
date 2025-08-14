@@ -1,9 +1,4 @@
-import cv2
-import numpy
-import os
-import matplotlib.pyplot as plt
-import argparse
-from typing import *
+import sys
 
 class TemplateClass:
     '''
@@ -153,10 +148,22 @@ class TemplateClass:
         # Boolean value
         pass
 
-def main() -> int:
+def static_vars(**kwargs):
+    def decorate(func):
+        for k in kwargs:
+            setattr(func, k, kwargs[k])
+        return func
+    return decorate
+
+def swap(a,b):
+    return b,a
+
+def slice(a, start=0, stop=None, step=1) -> list:
+    stop = stop or len(a)
+    return a[start:stop:step]
+
+def main(argc: int, *argv: str) -> int:
     return 0
 
-
 if __name__ == '__main__':
-    res : int = main()
-    print(f"Code executed with exit code {res}")
+    exit(main(len(sys.argv), *sys.argv))
