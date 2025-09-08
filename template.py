@@ -148,6 +148,10 @@ class TemplateClass:
         # Boolean value
         pass
 
+def setParams(instance, local_vars, exclude=('self',)):
+    for name, value in local_vars.items():
+        if name not in exclude: setattr(instance, name, value)
+
 def static_vars(**kwargs):
     def decorate(func):
         for k in kwargs:
