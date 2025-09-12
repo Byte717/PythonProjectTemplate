@@ -166,6 +166,12 @@ def slice(a, start=0, stop=None, step=1) -> list:
     stop = stop or len(a)
     return a[start:stop:step]
 
+def linspace(a, b, num):
+    if num < 2:
+        return [a]
+    step = (b - a) / (num - 1)
+    return [a + i * step for i in range(num)]
+
 def main(argc: int, *argv: str) -> int:
     return 0
 
