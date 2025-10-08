@@ -172,8 +172,9 @@ def linspace(a, b, num):
     return [a + i * step for i in range(num)]
 
 def main(argc: int, *argv: str) -> int:
+    
     return 0
 
 if __name__ == '__main__':
     argv = __import__("sys").argv
-    exit(main(len(argv), argv))
+    exit(main(len(argv), *argv))
